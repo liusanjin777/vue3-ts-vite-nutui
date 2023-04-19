@@ -39,10 +39,10 @@
     "lib": ["dom", "esnext"],
     "noImplicitAny": false,
     "skipLibCheck": true,
-    "types": ["node"],
+    "types": ["node", "webpack-env"],
     "removeComments": true,
     "paths": {
-      "/@/*": ["src/*"],
+      "@/*": ["src/*"],
       "/#/*": ["types/*"]
     }
   },

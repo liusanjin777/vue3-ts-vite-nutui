@@ -1,23 +1,20 @@
-(function (window, html) {
-  // 规定默认的设计稿宽度720px
-  const designWidth = 720;
+import router from '@/router'
+import { RouteLocationNormalized } from 'vue-router'
+import { getToken } from './utils/auth'
 
-  function recalc() {
-    const windowWidth = html.clientWidth < designWidth ? html.clientWidth : designWidth;
-
-    // *100 之后，则样式中rem的值就需要相应的缩小100倍
-    // 即：设计稿中的20px，在样式中就要写成0.2rem
-    const fontSize = windowWidth / designWidth * 100;
-    console.log(fontSize);
-    
-    setFontSize(fontSize);
+router.beforeEach(async (to:RouteLocationNormalized, from: RouteLocationNormalized, next: any) => {
+  if (!getToken()) {
+    if (to.path == '/login') {
+      next()
+    } else {
+      next({ path: '/login' })
+    }
+  } else {
+    next()
   }
+} )
 
-  function setFontSize(fontSize: number) {
-    html.style.fontSize = `${fontSize}px`;
-  }
-  // 监听resize
-  window.addEventListener('resize', recalc);
-  recalc();
-}(window, document.documentElement));
+router.afterEach(async (to:RouteLocationNormalized, from: RouteLocationNormalized, next: any) => {
+  
+} )
 

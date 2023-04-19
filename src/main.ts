@@ -6,7 +6,8 @@ import router from "./router";
 import nutui from './plugins/nutui'
 import "amfe-flexible/index.js";
 import "./assets/style/index.scss";
-import "./premisson"
+import "@/utils/toRem"
+import "@/premisson"
 const app = createApp(App);
 
 app.use(createPinia());

@@ -42,7 +42,9 @@ export default {
     navbar
   },
   setup(props) {
-    const proxy: any = getCurrentInstance() ? getCurrentInstance()!.proxy : null 
+    console.log(props);
+    
+    const proxy: any = getCurrentInstance()!.proxy
     const hasMore = ref(true);
     const data: data = reactive({
       defultList: []

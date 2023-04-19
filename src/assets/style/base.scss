@@ -39,29 +39,6 @@
     background-color: #cdd1d4;
   }
 }
-.page-drawer-tel .ant-drawer-body {
-  .scroll();
-}
-.page-view {
-  padding-top: 24px;
-  &-content {
-    .scroll();
-  }
-  &-scroll {
-    width: 80%;
-    min-width: 1152px;
-    height: 100%;
-    display: inline-block;
-    background: #fff;
-    text-align: center;
-    border-radius: 2px;
-  }
-}
-
-.ant-layout,
-.ant-table-body {
-  .scroll();
-}
 
 html,
 body {
@@ -266,7 +243,7 @@ textarea {
 .radius {
   &-full {
     border-radius: 50%;
-    .radius();
+    // .radius();
   }
 }
 

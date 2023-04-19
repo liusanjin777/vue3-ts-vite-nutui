@@ -26,7 +26,9 @@
       <li class="infiniteLi" v-for="(item, index) in defultList" :key="index">{{item}}</li>
     </nut-infiniteloading>
   </ul> -->
-  <div class="a"></div>
+  <div class="a">
+    <div class="b"></div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -92,11 +94,11 @@ export default {
   text-align: center;
 }
 .a {
-  width: 20px;
-  height: 20px;
+  width: 100%;
+  height: 40px;
   background-color: red;
   .b {
-    color: #eee;
+    background: #fff;
   }
 }
 </style>
